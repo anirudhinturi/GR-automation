@@ -1,0 +1,20 @@
+Enable SAP GUI Scripting in SAP settings (Admin must do this).
+
+Install SAP GUI client on your system.
+
+Prepare Excel template with default username/password and order data.
+
+Write Python script:
+
+Read Excel.
+
+Launch SAP GUI.
+
+Login.
+
+Navigate and update POs.
+
+Test on sandbox environment before production.
+
+Roll out to team.
+
