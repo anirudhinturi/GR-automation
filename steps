@@ -1,0 +1,44 @@
+Step 1 — Data Source (Excel)
+An Excel file will store:
+
+Default username and password (always present in the first row).
+
+List of orders and their expected vs. actual quantities from invoices.
+
+Step 2 — Script Reads Excel
+Python (or another scripting tool) opens the Excel file.
+
+Reads:
+
+Username/password → For SAP login.
+
+Order list → For checking and updating in SAP.
+
+Step 3 — Launch SAP GUI and Login
+The script opens the SAP Logon application.
+
+Selects the correct SAP system (e.g., PRD or DEV).
+
+Fills username and password from Excel.
+
+Logs in automatically.
+
+Step 4 — Navigate in SAP
+Script navigates through the required SAP transaction codes (T-codes). Example:
+
+/nME22N → Change Purchase Order.
+
+Selects the Purchase Order number from our Excel list.
+
+Step 5 — Check and Update Quantities
+Script reads current quantity in SAP.
+
+Compares with Excel’s actual quantity.
+
+If mismatch → updates the SAP entry.
+
+Step 6 — Save and Logout
+After all updates, the script saves changes in SAP.
+
+Logs out of SAP automatically.
+
