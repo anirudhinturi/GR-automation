@@ -1,0 +1,14 @@
+GR Automation
+
+The GR Automation project aims to streamline the Goods Receipt (GR) process by integrating invoice data extraction, Excel-based storage, and automated updates in SAP. Traditionally, the GR process involves manually reading invoice details, comparing them with purchase orders in SAP, and updating quantities in case of mismatches. This manual process is time-consuming, prone to human error, and inefficient for large transaction volumes.
+
+Our system automates the workflow in three stages:
+
+Invoice Data Extraction – The system scans or reads invoice files and extracts key fields such as transaction code, purchase order number, item descriptions, quantities, and prices. These details are stored in an Excel sheet that serves as the central reference.
+
+Excel-Based Data Handling – The Excel sheet contains both extracted invoice details and pre-stored credentials (username and password) required for SAP login. This acts as the bridge between the invoice and SAP systems.
+
+SAP GUI Automation – Using SAP GUI Scripting, the automation logs into the SAP system, navigates to the GR transaction screen, searches the relevant purchase order, compares the ordered and received quantities, and automatically updates mismatched quantities based on the invoice data.
+
+This automation significantly reduces manual effort, eliminates repetitive data entry, and ensures higher accuracy in goods receipt postings. Additionally, by leveraging Excel as a universal data intermediary, the solution remains flexible and easy to maintain, without requiring changes to the existing SAP infrastructure.
+
