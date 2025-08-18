@@ -1,0 +1,75 @@
+Phase 1 – Invoice Data Extraction to Excel (GR Automation)
+Goal:
+Capture invoice details from a PDF or image (PNG/JPG) and store them in an Excel file, with username & password stored only once at the top.
+
+Technologies & Libraries
+Python 3.x – Main programming language.
+
+pdfplumber – Reads text from machine-readable PDFs.
+
+pytesseract + Pillow – Performs OCR (Optical Character Recognition) on scanned documents and images to detect text.
+
+os & pathlib – Handle file paths and directories.
+
+openpyxl – Create and update Excel files.
+
+re (Regex) – Extract structured fields like PO number, quantities, and item codes.
+
+What is OCR?
+OCR (Optical Character Recognition) is a technology that converts images of text into actual, editable text data.
+
+This is important because scanned invoices or images are just pictures — without OCR, a computer can’t “read” them.
+
+pytesseract is a Python wrapper for Google’s Tesseract OCR engine, which detects characters from images and converts them into text strings for further processing.
+
+Works on JPEG, PNG, or scanned PDFs where text isn’t directly selectable.
+
+Workflow
+User uploads or drags a PDF/image file into the tool.
+
+File type detection:
+
+If PDF is text-based → use pdfplumber.
+
+If PDF is scanned or an image → use pytesseract for OCR.
+
+Extract details:
+
+Purchase Order (PO) Number
+
+Item Codes
+
+Ordered Quantity
+
+Delivered Quantity
+
+Write to Excel:
+
+Row 1: Username & Password (stored once, pre-filled).
+
+Row 2 onwards: Extracted invoice details, one row per item.
+
+Save file: Save in .xlsx format.  Append new invoice data without duplicating credentials.
+
+
+
+System Setup for Phase 1 – Invoice Data Extraction
+1. Software Requirements
+•	Python 3.10 or above → Core language for automation scripts
+•	PyCharm IDE (Community/Professional Edition) → Development environment
+•	Tesseract OCR Engine → For extracting text from scanned invoices (PNG/PDF)
+•	Microsoft Excel / LibreOffice → To open and verify extracted Excel files
+
+2. Python Libraries
+•	pytesseract → OCR text extraction
+•	pdfplumber → Extract text/tables from PDF invoices
+•	openpyxl → Writing extracted data into Excel files
+•	pandas → Data cleaning and structuring
+•	opencv-python → Preprocessing images for better OCR accuracy
+
+3. Installation Steps
+1.	Install Python 3.10 from python.org.
+2.	Install PyCharm IDE (Community Edition is sufficient).
+3.	Install Tesseract OCR → Add its path to system environment variables.
+4.	Open PyCharm and create a new Python project.
+5.	Install required libraries using terminal/command prompt
